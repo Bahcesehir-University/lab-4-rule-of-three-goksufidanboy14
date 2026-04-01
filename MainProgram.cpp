@@ -68,7 +68,7 @@ public:
         //   3. Allocate m_data with new char[m_length + 1]
         //   4. Copy input into m_data using strcpy()
         g_constructorCount++;
-strlen( input) ;
+
     m_length =strlen( input);
     m_data = new char[m_length + 1];   // allocate own memory
     strcpy(m_data, input);       // copy content
@@ -153,11 +153,11 @@ strlen( input) ;
         //   1. Delete old m_data (delete[])
          delete[] m_data;
         //   2. Calculate new length with strlen()
-        strlen(newData) ;
+      m_length=  strlen(newData) ;
         //   3. Allocate new memory: new char[m_length + 1]
          m_data = new char[m_length + 1];
         //   4. Copy newData into m_data using strcpy()
-         strcpy(m_data,getData());
+         strcpy(m_data,newData);
     }
 
     // --------------------------------------------------
